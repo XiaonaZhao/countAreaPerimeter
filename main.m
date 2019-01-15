@@ -1,10 +1,10 @@
 %% for RGB pictures
-im = imread('DH_Zone2_001_1.jpg');
+im = imread('New_DH_zone3_000.jpg');
 mainf=imshow(im);
 [x, y] = ginput(2);
 xlist = int32(x);
 ylist = int32(y);
-tolerance = 16;
+tolerance = 50;
 bin_mask = magicwand(im, ylist, xlist, tolerance);
 subplot(2, 3, 1); imshow(im);
 subplot(2, 3, 4); imshow(bin_mask);
@@ -26,7 +26,7 @@ MaxP = max([P.Perimeter])
 MaxA = max([A.Area])
 
 %%  deal with pictures from PHOTOSHOP
-name = 'DH_zone01_000_1.jpg';
+name = 'Oxed_DH_zone7_000_w.jpg';
 IMG = imread(name);
 % th = graythresh(IMG);
 % IMG1 = im2bw(IMG, th); %#ok<IM2BW>
